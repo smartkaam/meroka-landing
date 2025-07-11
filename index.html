@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meroka - Workforce Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 id="site-title">Meroka</h1>
+      <select id="language-toggle">
+        <option value="en">English</option>
+        <option value="np">नेपाली</option>
+      </select>
+    </div>
+  </header>
+  <main class="container">
+    <section>
+      <h2 data-en="Smart Workforce Management" data-np="स्मार्ट कार्यबल व्यवस्थापन">Smart Workforce Management</h2>
+      <p data-en="Track attendance, manage payroll, and more." data-np="हाजिरी ट्र्याक गर्नुहोस्, तलब व्यवस्थापन गर्नुहोस्, र अरू धेरै।">
+        Track attendance, manage payroll, and more.
+      </p>
+    </section>
+    <section>
+      <h2 data-en="Features" data-np="विशेषताहरू">Features</h2>
+      <ul>
+        <li data-en="GPS & Selfie-based Attendance" data-np="जीपीएस र सेल्फी आधारित हाजिरी">GPS & Selfie-based Attendance</li>
+        <li data-en="Multi-language Support" data-np="बहुभाषी समर्थन">Multi-language Support</li>
+        <li data-en="Automated Payroll" data-np="स्वचालित तलब">Automated Payroll</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="container">
+    <p data-en="© 2025 Meroka. All rights reserved." data-np="© २०२५ मेरोका। सबै अधिकार सुरक्षित।">© 2025 Meroka. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const langToggle = document.getElementById('language-toggle');
+    langToggle.addEventListener('change', () => {
+      const lang = langToggle.value;
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.innerText = el.getAttribute('data-' + lang);
+      });
+    });
+  </script>
+</body>
+</html>
